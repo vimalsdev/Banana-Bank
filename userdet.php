@@ -54,13 +54,13 @@
                 
             $sender = $sql1['name'];
             $receiver = $sql2['name'];
-            $sql3 = "INSERT INTO trans_hist('sender', 'receiver', 'amt_trans') VALUES ('$sender','$receiver','$amount')";
-            $query = mysqli_query($conn, $sql3);
+            $sql = "INSERT INTO `transac_hist` (`sender`, `receiver`, `amt_trans`) VALUES ('$sender', '$receiver', '$amount')";
+            $query = mysqli_query($conn, $sql);
         
             if ($query) {
               echo "<script> alert('Transaction Successful');
-                                             window.location='transhist.php';
-                                   </script>";
+                     window.location='transhist.php';
+                     </script>";
             }
         
 
@@ -117,11 +117,12 @@
                 font-size: 25px;
                 height: 45px;
                 width: 60px;
+                color: orange;
             }
     
              td{
                 border-collapse: collapse;
-                border: 2px solid black;
+                border: 2px solid white;
                 width: 60px;
                 height: 45px;
                 font-size:20px;
@@ -129,6 +130,19 @@
                 font-family: 'Oxygen', serif;
                 background-color: white;
                 color: black;
+            }
+            .tabrow
+            {
+                background-color: blue;
+            }
+            .tabdat{
+                background-color: black;
+                color: white;
+                font-weight: bold;
+            }
+            h1
+            {
+                text-align: center;
             }
         </style>
         <!--Table Style End-->
@@ -142,7 +156,7 @@
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-            <img src="images/logo.png" class="imagelink" width="200" height="">
+            <img src="images/logo.png" class="imagelink" width="200" height="70">
           </a>
     
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav-pills">
@@ -184,7 +198,7 @@
         <!-- TABLE -->    
            
         <div class="container">
-            <br><h1>TRANSACTION</h1>
+            <br><h1>MAKE A TRANSFER</h1>
                 <?php
                     include 'conn.php';
                     $sid=$_GET['id'];
@@ -199,16 +213,16 @@
             <form method="post" name="tcredit" class="tabletext" ><br>
                 <div>
                     <table class="table table-striped table-hover">
-                        <tr style="color : white;" class="table-dark">                            
+                        <tr style="color : white;" class="tabrow">                            
                             <th scope="col" class="text-center py-2">Name</th>
                             <th scope="col" class="text-center py-2">E-Mail</th>                            
                             <th scope="col" class="text-center py-2">Balance</th>
                         </tr>
                         
-                        <tr style="color : black; text-align : center">                        
-                            <td class="table-light"><?php echo $rows['name']?></td>
-                            <td class="table-light"><?php echo $rows['email']?></td>                        
-                            <td class="table-light"><?php echo $rows['balance']?></td>
+                        <tr style="text-align : center" class="tabdat">                        
+                            <td class="tabdat"><?php echo $rows['name']?></td>
+                            <td class="tabdat"><?php echo $rows['email']?></td>                        
+                            <td class="tabdat"><?php echo $rows['balance']?></td>
                         </tr>
                     </table>
                 </div>
@@ -258,8 +272,8 @@
                         <tbody>
                       <tr>
                       <ul>
-                        <th><li>India</li></th>
-                        <td><ol>
+                        <th class="tabrow"><li>India</li></th>
+                        <td class="tabdat"><ol>
                           <li>Mumbai</li>
                           <li>Chennai</li>
                           <li>Delhi</li>
@@ -267,8 +281,8 @@
                       </ol></td>
                       </ul> 
                     <ul>
-                      <th><li>United Arab Emirates</li></th>
-                        <td><ol>
+                      <th class="tabrow"><li>United Arab Emirates</li></th>
+                        <td class="tabdat"><ol>
                           <li>Dubai</li>
                           <li>Abu Dhabi</li>
                           <li>Sharjah</li>

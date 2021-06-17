@@ -44,11 +44,12 @@
                 font-size: 25px;
                 height: 45px;
                 width: 60px;
+                color: orange;
             }
     
              td{
                 border-collapse: collapse;
-                border: 2px solid black;
+                border: 2px solid white;
                 width: 60px;
                 height: 45px;
                 font-size:20px;
@@ -56,6 +57,15 @@
                 font-family: 'Oxygen', serif;
                 background-color: white;
                 color: black;
+            }
+            .tabrow
+            {
+                background-color: blue;
+            }
+            .tabdat{
+                background-color: black;
+                color: white;
+                font-weight: bold;
             }
         </style>
         <!--Table Style End-->
@@ -115,12 +125,12 @@
                     <div class="table-responsive-sm">
                         <h1>CUSTOMER DETAILS</h1>
                             <table class="table table-hover">
-                                <thead style="color : white;" class="table-dark">
+                                <thead style="color : white;" class="tabrow">
                                     <tr>
-                                        <th scope="col" class="text-center py-2">SNo</th>
+                                        <th scope="col" class="text-center py-2">SerNo</th>
                                         <th scope="col" class="text-center py-2">Name</th>
-                                        <th scope="col" class="text-center py-2">E-Mail</th>
-                                        <th scope="col" class="text-center py-2">Phone NO</th>
+                                        <th scope="col" class="text-center py-2">E-mail</th>
+                                        <th scope="col" class="text-center py-2">Phone Number</th>
                                         <th scope="col" class="text-center py-2">Balance</th>
                                         <th scope="col" class="text-center py-2">Operation</th>
                                     </tr>
@@ -131,13 +141,13 @@
                                         while($rows=mysqli_fetch_assoc($result)){
                                     ?>
 
-                                    <tr style="color : black;">
-                                        <td class="table-light"><?php echo $rows['ser_no'] ?></td>
-                                        <td class="table-light"><?php echo $rows['name']?></td>
-                                        <td class="table-light"><?php echo $rows['email']?></td>
-                                        <td class="table-light"><?php echo $rows['ph_no']?></td>
-                                        <td class="table-light"><?php echo $rows['balance']?></td>
-                                        <td class="table-secondary"><a href="userdet.php?id= <?php echo $rows['ser_no'] ;?>"> <button class="btn btn-outline-success"><b>Transfer</b></button></a></td> 
+                                    <tr class="tabdat">
+                                        <td class="tabdat"><?php echo $rows['ser_no'] ?></td>
+                                        <td class="tabdat"><?php echo $rows['name']?></td>
+                                        <td class="tabdat"><?php echo $rows['email']?></td>
+                                        <td class="tabdat"><?php echo $rows['ph_no']?></td>
+                                        <td class="tabdat"><?php echo $rows['balance']?></td>
+                                        <td class="tabdat"><a href="userdet.php?id= <?php echo $rows['ser_no'] ;?>"> <button class="btn btn-outline-danger"><b>Transfer</b></button></a></td> 
                                     </tr>
 
                                     <?php
@@ -159,8 +169,8 @@
                         <tbody>
                       <tr>
                       <ul>
-                        <th><li>India</li></th>
-                        <td><ol>
+                        <th class="tabrow"><li>India</li></th>
+                        <td class="tabdat"><ol>
                           <li>Mumbai</li>
                           <li>Chennai</li>
                           <li>Delhi</li>
@@ -168,8 +178,8 @@
                       </ol></td>
                       </ul> 
                     <ul>
-                      <th><li>United Arab Emirates</li></th>
-                        <td><ol>
+                      <th class="tabrow"><li>United Arab Emirates</li></th>
+                        <td class="tabdat"><ol>
                           <li>Dubai</li>
                           <li>Abu Dhabi</li>
                           <li>Sharjah</li>

@@ -44,11 +44,12 @@
                 font-size: 25px;
                 height: 45px;
                 width: 60px;
+                color: orange;
             }
     
              td{
                 border-collapse: collapse;
-                border: 2px solid black;
+                border: 2px solid white;
                 width: 60px;
                 height: 45px;
                 font-size:20px;
@@ -56,6 +57,15 @@
                 font-family: 'Oxygen', serif;
                 background-color: white;
                 color: black;
+            }
+            .tabrow
+            {
+                background-color: blue;
+            }
+            .tabdat{
+                background-color: black;
+                color: white;
+                font-weight: bold;
             }
         </style>
         <!--Table Style End-->
@@ -114,7 +124,7 @@
             <div class="table-responsive-sm">
                 <h1>Transaction History</h1>
                 <table class="table table-hover">
-                    <thead style="color : white;" class="table-dark">
+                    <thead style="color : white;" class="tabrow">
                         <tr>
                             <th class="text-center">Sender</th>
                             <th class="text-center">Receiver</th>
@@ -126,17 +136,17 @@
 
                         <?php
                             include 'conn.php';
-                            $sql ="select * from trans_hist";
+                            $sql ="select * from transac_hist";
                             $query =mysqli_query($conn, $sql);
                             while($rows = mysqli_fetch_assoc($query))
                             {
                         ?>
 
-                        <tr style="color : black;">
-                            <td class="table-light"><?php echo $rows['sender']; ?></td>
-                            <td class="table-light"><?php echo $rows['receiver']; ?></td>
-                            <td class="table-light"><?php echo $rows['amt_trans']; ?> </td>
-                            <td class="table-light"><?php echo $rows['date_time']; ?> </td>
+                        <tr style="color : black;" class="tabdat">
+                            <td class="tabdat"><?php echo $rows['sender']; ?></td>
+                            <td class="tabdat"><?php echo $rows['receiver']; ?></td>
+                            <td class="tabdat"><?php echo $rows['amt_trans']; ?> </td>
+                            <td class="tabdat"><?php echo $rows['date_time']; ?> </td>
                         </tr>
 
                         <?php
@@ -157,8 +167,8 @@
                         <tbody>
                       <tr>
                       <ul>
-                        <th><li>India</li></th>
-                        <td><ol>
+                        <th class="tabrow"><li>India</li></th>
+                        <td class="tabdat"><ol>
                           <li>Mumbai</li>
                           <li>Chennai</li>
                           <li>Delhi</li>
@@ -166,8 +176,8 @@
                       </ol></td>
                       </ul> 
                     <ul>
-                      <th><li>United Arab Emirates</li></th>
-                        <td><ol>
+                      <th class="tabrow"><li>United Arab Emirates</li></th>
+                        <td class="tabdat"><ol>
                           <li>Dubai</li>
                           <li>Abu Dhabi</li>
                           <li>Sharjah</li>
