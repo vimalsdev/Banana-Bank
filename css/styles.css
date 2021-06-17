@@ -6,35 +6,13 @@ body{
 box-sizing: border-box;
 }
 
-.heading{
-	color: white;
-	text-align: center;
-	font-family: "Comic Sans MS";
-	margin-top: 50px; 
-	font-size: 25px; 
+header{
+	font-weight: 800;
+	font-family: 'Oxygen',cursive;
 }
 .textcol
 {
    color: red;
-}
-.mid
-{
-    color: white;
-    overflow: none;
-}
-.mid p{
-	text-align: justify;
-	font-size: 15px;
-	color: #ffffff;
-	font-weight: bold;
-}
-.mid p span{
-	font-size: 15px;
-	font-family: "Arial",sans serif;
-}
-.navlogo
-{
-	float: left;
 }
 div
 {
@@ -53,36 +31,11 @@ div
     font-family: "Tahoma",sans serif;
     margin-top: 15px;
 }
-.loan
-{
-	width: 600px;
-	height: 300px;
-	margin: 5px;
-	float: left;
-}
-
-.navibar
-{
-	background-color: #ab3e03;
-	overflow: auto;
-	padding: 0.3cm;
-	text-align: center;
-	color: black;
-}
-.navibar a.navicons
-{
-		padding: 14px;
-		float: right;
-		font-size: 30px;
-		color: white;
-		font-weight: bold;
-		text-align: center;
-		text-decoration: none;
-}
 .branch{
 	color: white;
 	text-align: center;
 	font-size: 20px; 
+	font-family: 'Playfair Display',cursive;
 }
 .branch ol 
 {
@@ -128,66 +81,10 @@ th{
 	font-weight: bold;
 	margin-right: 100 px;
 }
-.ContactUs
-{
-   float: left;
-   font-size: 50 px;
-   width: 100%;
-}
-.ContactUs h1
-{
-    color: white;
-	background-color: #ab3e03
-}
-.b1{
-	text-align: center;
-	background-color: darkviolet;
-	color: white;
-	border-radius: 9px;
-	letter-spacing: 2px;
-	padding: 14px;
-	font-size: 18px;
-	transition: 0.5s;
-}
-.b2{
-	text-align: center;
-	background-color: yellow;
-	color: black;
-	border-radius: 9px;
-	letter-spacing: 2px;
-	padding: 14px;
-	font-size: 18px;
-	transition: 0.5s;
-}
-.b3{
-	text-align: center;
-	background-color: chartreuse;
-	color: crimson;
-	border-radius: 9px;
-	letter-spacing: 2px;
-	padding: 14px;
-	font-size: 18px;
-	transition: 0.5s;
-}
-button{
-	border:none;
-	border-radius: 8px;
-	padding: 14px;
-	background:#7B8788; 
-	color:white;
-	letter-spacing: 2px;
-	font-size: 16px;
-	transition: 0.5s;
-}
-button:hover{
-	background: #1590c5;
-	color: white;
-	transform: scale(1.1);
-}
 .footer{
-	font-family: 'Lucida Sans', cursive;
-	font-size: 30px;
-	font-weight: 500;
+	font-family: 'Times New Roman', cursive;
+	font-size: 28px;
+	font-weight: bold;
 	color: darkorange;
 	padding: 0.1%;
 	bottom: 0px;
@@ -209,3 +106,13 @@ a:hover{
 		font-size: 30px;
 		color: white;
 	}
+h1{
+	font-family: 'Noto Sans JP',cursive;
+	font-weight: bold;
+}
+.content{
+	font-family: 'Nunito Sans',cursive;
+}
+button:hover{
+	transform: scale(1.1);
+}
