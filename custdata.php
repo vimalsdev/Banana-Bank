@@ -44,7 +44,7 @@
                 font-size: 25px;
                 height: 45px;
                 width: 60px;
-                color: orange;
+                color: black;
             }
     
              td{
@@ -60,7 +60,7 @@
             }
             .tabrow
             {
-                background-color: blue;
+                background-color: #00ff80;
             }
             .tabdat{
                 background-color: black;
@@ -92,7 +92,7 @@
     
           <div class="col-md-3 text-end">
             <a href="custdata.php">
-            <button type="button" class="btn btn-outline-success me-2">Transfer</button>
+            <button type="button" class="btn btn-outline-success me-2"><b>Transfer</b></button>
           </a> 
           </div>
         </div>
@@ -124,8 +124,8 @@
                 <div class="col">
                     <div class="table-responsive-sm">
                         <h1>CUSTOMER DETAILS</h1>
-                            <table class="table table-hover">
-                                <thead style="color : white;" class="tabrow">
+                            <table class="table table-hover table-striped">
+                                <thead style="color : white;" class="table-secondary">
                                     <tr>
                                         <th scope="col" class="text-center py-2">SerNo</th>
                                         <th scope="col" class="text-center py-2">Name</th>
@@ -142,12 +142,12 @@
                                     ?>
 
                                     <tr class="tabdat">
-                                        <td class="tabdat"><?php echo $rows['ser_no'] ?></td>
-                                        <td class="tabdat"><?php echo $rows['name']?></td>
-                                        <td class="tabdat"><?php echo $rows['email']?></td>
-                                        <td class="tabdat"><?php echo $rows['ph_no']?></td>
-                                        <td class="tabdat"><?php echo $rows['balance']?></td>
-                                        <td class="tabdat"><a href="userdet.php?id= <?php echo $rows['ser_no'] ;?>"> <button class="btn btn-outline-danger"><b>Transfer</b></button></a></td> 
+                                        <td class="table-dark"><?php echo $rows['ser_no'] ?></td>
+                                        <td class="table-dark"><?php echo $rows['name']?></td>
+                                        <td class="table-dark"><?php echo $rows['email']?></td>
+                                        <td class="table-dark"><?php echo $rows['ph_no']?></td>
+                                        <td class="table-dark"><?php echo $rows['balance']?></td>
+                                        <td class="table-dark"><a href="userdet.php?id= <?php echo $rows['ser_no'] ;?>"> <button class="btn btn-outline-danger"><b>Transfer</b></button></a></td> 
                                     </tr>
 
                                     <?php

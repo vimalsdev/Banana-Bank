@@ -117,7 +117,7 @@
                 font-size: 25px;
                 height: 45px;
                 width: 60px;
-                color: orange;
+                color: black;
             }
     
              td{
@@ -130,10 +130,11 @@
                 font-family: 'Oxygen', serif;
                 background-color: white;
                 color: black;
+                font-weight: bold;
             }
             .tabrow
             {
-                background-color: blue;
+                background-color: #00ff80;
             }
             .tabdat{
                 background-color: black;
@@ -213,16 +214,16 @@
             <form method="post" name="tcredit" class="tabletext" ><br>
                 <div>
                     <table class="table table-striped table-hover">
-                        <tr style="color : white;" class="tabrow">                            
+                        <tr style="color : white;" class="table-secondary">                            
                             <th scope="col" class="text-center py-2">Name</th>
                             <th scope="col" class="text-center py-2">E-Mail</th>                            
                             <th scope="col" class="text-center py-2">Balance</th>
                         </tr>
                         
-                        <tr style="text-align : center" class="tabdat">                        
-                            <td class="tabdat"><?php echo $rows['name']?></td>
-                            <td class="tabdat"><?php echo $rows['email']?></td>                        
-                            <td class="tabdat"><?php echo $rows['balance']?></td>
+                        <tr style="text-align : center" class="table-dark">                        
+                            <td class="table-dark"><?php echo $rows['name']?></td>
+                            <td class="table-dark"><?php echo $rows['email']?></td>                        
+                            <td class="table-dark"><?php echo $rows['balance']?></td>
                         </tr>
                     </table>
                 </div>

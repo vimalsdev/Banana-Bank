@@ -40,11 +40,11 @@
                 border-collapse: collapse;
                 border: 2px solid black;
                 font-family: 'Oxygen', serif;
-                font-weight: 35px;
+                font-weight: bold;
                 font-size: 25px;
                 height: 45px;
                 width: 60px;
-                color: orange;
+                color: black;
             }
     
              td{
@@ -57,10 +57,11 @@
                 font-family: 'Oxygen', serif;
                 background-color: white;
                 color: black;
+                font-weight: bold;
             }
             .tabrow
             {
-                background-color: blue;
+                background-color: #00ff80;
             }
             .tabdat{
                 background-color: black;
@@ -124,7 +125,7 @@
             <div class="table-responsive-sm">
                 <h1>Transaction History</h1>
                 <table class="table table-hover">
-                    <thead style="color : white;" class="tabrow">
+                    <thead style="color : white;" class="table-secondary">
                         <tr>
                             <th class="text-center">Sender</th>
                             <th class="text-center">Receiver</th>
@@ -142,11 +143,11 @@
                             {
                         ?>
 
-                        <tr style="color : black;" class="tabdat">
-                            <td class="tabdat"><?php echo $rows['sender']; ?></td>
-                            <td class="tabdat"><?php echo $rows['receiver']; ?></td>
-                            <td class="tabdat"><?php echo $rows['amt_trans']; ?> </td>
-                            <td class="tabdat"><?php echo $rows['date_time']; ?> </td>
+                        <tr style="color : black;" class="table-dark">
+                            <td class="table-dark"><?php echo $rows['sender']; ?></td>
+                            <td class="table-dark"><?php echo $rows['receiver']; ?></td>
+                            <td class="table-dark"><?php echo $rows['amt_trans']; ?> </td>
+                            <td class="table-dark"><?php echo $rows['date_time']; ?> </td>
                         </tr>
 
                         <?php

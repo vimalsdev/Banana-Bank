@@ -102,13 +102,13 @@ a:hover{
 	transform: scale(1.1);
 }
 	h1,.content{
-		float: left;
 		font-size: 30px;
 		color: white;
 	}
 h1{
 	font-family: 'Noto Sans JP',cursive;
 	font-weight: bold;
+	text-align: center;
 }
 .content{
 	font-family: 'Nunito Sans',cursive;
